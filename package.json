@@ -18,5 +18,13 @@
   "bugs": {
     "url": "https://github.com/sunita321/mongodb-news-scraper/issues"
   },
-  "homepage": "https://github.com/sunita321/mongodb-news-scraper#readme"
+  "homepage": "https://github.com/sunita321/mongodb-news-scraper#readme",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "cheerio": "^0.22.0",
+    "express": "^4.14.1",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^4.8.5",
+    "request": "^2.79.0"
+  }
 }
