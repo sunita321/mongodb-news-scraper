@@ -1,1 +1,1 @@
-# mongodb-web-scraper
+# MongoDB-news-scraper
