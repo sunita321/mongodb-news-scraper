@@ -1,0 +1,22 @@
+{
+  "name": "mongodb-news-scraper",
+  "version": "1.0.0",
+  "description": "web scraper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunita321/mongodb-news-scraper.git"
+  },
+  "keywords": [
+    "mongodb"
+  ],
+  "author": "Sunita Ramnarinesingh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sunita321/mongodb-news-scraper/issues"
+  },
+  "homepage": "https://github.com/sunita321/mongodb-news-scraper#readme"
+}
