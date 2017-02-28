@@ -4,61 +4,58 @@
   <meta charset="UTF-8">
   <!-- Tab Title -->
   <title>dw Articles</title>
-    <!-- Tab Image -->
-    <link rel="icon" href="https://www.dailyworth.com/wp-content/uploads/2016/12/favicon-1.png">
 
-  <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <!-- Tab Image -->
+    <link rel="icon" href="https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/news-128.png">
+
+  
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom Styling -->
+
+  <!-- Custom CSS Styling -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
     <!-- Page Container -->
     <div class="container-fluid">
+    <center>
+      <div class="row">
   
-  <div id="intro" class="jumbotron">
-    <h3>Welcome to dw Articles! This site simply scrapes the Daily Worth for articles and displays them here for you to access all in one place. Each article will open in a new page so you can come back here and view other articles.</h3>
-  <div class="row">
-    <!-- Button trigger modal -->
-    <div id="buttonWrapper">
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#commentModal">Comments</button>
-    <button id="showArticles" class="btn btn-primary">Show articles</button>
-  </div>
-    <!-- Modal -->
-    <div class="modal fade" id="commentModal" tabindex="-1" role="dialog" aria-labelledby="modalPop">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Leave a comment</h4>
-          </div>
-          <div class="modal-body">
-            <div id="userinput">
-              <input type="text" id="title"/>
-              <br/>
-              <p>Comments</p>
-              <textarea id="comment"></textarea>
-              <div id="buttons">
-                <div id="actionbutton">
-                  <button id="makenew" class="btn">Submit</button>
-                </div>
-                <div id="commentResults"></div>
-              </div>
-            </div><!--userinput end-->
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
+      <div id="intro" class="jumbotron">
+
+      <h3>DailyWorth <br> Web Scraped Summary</h3>
+
       </div>
-    </div><!--Modal end-->
-    <div id="results" hidden="true"></div>
-  </div>
-  </div>
-</div>
+
+
+      <!-- Button trigger modal -->
+      <div id="buttonWrapper">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#commentModal">Comments</button>
+      <button id="showArticles" class="btn btn-primary">Show articles</button>
+      </div>
+
+
+
+      <div id="results" hidden="true"></div>
+      </div>
+
+    </center>
+    </div>
+   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="app.js"></script>
 </body>
+
+
+    <!-- Footer -->
+    <footer class = "footer1">
+      <div class="container">
+        <center>
+        <div class = "row">
+        Articles were web scraped from 
+        <a href="https://www.dailyworth.com/">www.dailyworth.com</a>
+        </div>
+        </center>
+      </div>
+    </footer>
 </html>
