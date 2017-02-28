@@ -48,5 +48,18 @@ db.on("error", function(error)
 // Once logged in to the db through mongoose, log a success message
 db.once("open", function() 
 {
-  console.log("Mongoose connection successful.");
+  console.log("Mongoose connection successful!");
+});
+
+
+//Import Routes from controller.js
+var router = require('./controllers/controller.js');
+app.use('/', router);
+
+
+// Launch App
+var port = process.env.PORT || 3000;
+app.listen(port, function()
+{
+  console.log('Running on port: ' + port);
 });
