@@ -6,7 +6,8 @@ $(document).ready(function () {
     });
 
     // set up the onclick for the buttons for each note
-    $('.noteButton').on('click', function (ret) {
+    $('.noteButton').on('click', function (ret) 
+    {
 
         // if we have a duplicate listener, stop it from listening
         ret.stopImmediatePropagation();

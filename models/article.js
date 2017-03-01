@@ -25,13 +25,6 @@ var ArticleSchema = new Schema({
     required: true,
     unique: true
   },
-//picture
-  picture: 
-  {
-    type: String,
-    required: true,
-    unique: true
-  },
   
 note: [{
     // Store ObjectIds in the array

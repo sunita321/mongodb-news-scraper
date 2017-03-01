@@ -11,7 +11,8 @@ router.get('/', function(request, response)
 {
 
 	// get all the articles
-	Article.find({}, function(error, data) {
+	Article.find({}, function(error, data) 
+	{
 
 		// check for error getting articles
 		if (error) console.log("error getting articles", error);
