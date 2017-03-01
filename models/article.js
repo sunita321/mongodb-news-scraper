@@ -1,6 +1,10 @@
 // Require Mongoose
 var mongoose = require('mongoose');
 
+// require the connection
+var db = require("../config/connection");
+
+
 // Create a Schema Class
 var Schema = mongoose.Schema;
 
@@ -10,22 +14,26 @@ var ArticleSchema = new Schema({
   title: 
   {
     type: String,
-    required: true
+    required: true,
+    unique: true,
+    dropDups: true
   },
   // link is a required string
   link: 
   {
     type: String,
-    required: true
+    required: true,
+    unique: true
   },
 //picture
   picture: 
   {
     type: String,
-    required: true
+    required: true,
+    unique: true
   },
   
-notes: [{
+note: [{
     // Store ObjectIds in the array
     type: Schema.Types.ObjectId,
     // The ObjectIds will refer to the ids in the Note model

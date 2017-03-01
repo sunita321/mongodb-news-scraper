@@ -1,0 +1,59 @@
+ <nav>
+    <div class="nav-wrapper #c2185b pink darken-2">
+      <a href="#" class="brand-logo #1e88e5 blue darken-1">Web Scraped News!</a>
+      <ul class = "right">
+
+        <li>
+            <a class="waves-effect waves-light btn"><i class="material-icons right">system_update_alt</i>Scrape!</a>
+        </li>
+
+              
+      </ul>
+    </div>
+  </nav>
+
+  <br>
+
+  <!-- Articles -->
+<div class="container">
+
+    <table>
+        <tbody>
+
+            {{#each articles}}
+            <div class=row>
+
+                <div class="col s8">
+                    <a href="{{this.link}}" class="collection-item blue-text" target="_blank">{{this.title}}</a>
+                </div>
+                <div class="col s4">
+                    <button class="noteButton waves-effect waves-light btn-flat blue" id="{{this._id}}">Add Note</button>
+                </div>
+
+            </div>
+            {{/each}}
+
+        </tbody>
+    </table>
+
+</div>
+        
+<!-- Note modal -->
+<div id="noteModal" class="modal modal-fixed-footer">
+
+    <div class="modal-content">
+        <p>Notes</p>
+        <ul class="messages collection"></ul>
+    </div>
+    
+    <div class="modal-footer">
+        <form name="noteForm" id="noteForm">
+                    <input required placeholder="Enter a note here" type="text" name="noteText" id="noteText">
+            <button class="btn green left" type="submit" id="noteButton">
+                Post Note!
+            </button>
+            <a href="/" class="modal-action modal-close waves-effect waves-light btn-flat">Close</a>
+        </form>
+    </div>
+
+</div>

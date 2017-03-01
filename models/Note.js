@@ -1,19 +1,16 @@
 // Require mongoose
 var mongoose = require("mongoose");
 
+// require the connection
+var db = require("../config/connection");
+
+
 // Create a schema class
 var Schema = mongoose.Schema;
-
 // Create the Note schema
 var NoteSchema = new Schema({
-  //Author
-  title: 
-  {
-    type: String
-  },
-  //Comment
-  body: 
-  {
+  // Just a string
+  noteText: {
     type: String
   }
 });
