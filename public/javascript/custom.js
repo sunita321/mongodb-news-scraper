@@ -60,7 +60,7 @@ $(document).ready(function () {
                     '<li class="note collection-item">'
                     + '<p>'
                     + (i+1) + ': ' + data[i].noteText + '</p>'
-                    + '<button class="individualNoteButton waves-effect waves-light btn-flat blue" data-currentButtonId="' + data[i]._id + '">Delete ' + (i+1) + '</button>'
+                    + '<button class="individualNoteButton waves-effect waves-red btn-flat blue" data-currentButtonId="' + data[i]._id + '">Delete ' + (i+1) + '</button>'
                     + '</li>'
                 );
 
