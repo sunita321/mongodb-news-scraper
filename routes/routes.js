@@ -70,7 +70,7 @@ router.post('/note/:id', function(request, response)
 });
 
 
-// delete note route
+// delete note 
 router.post('/deleteNote/:id', function(request, response) 
 {
 	console.log(request.params.id);
