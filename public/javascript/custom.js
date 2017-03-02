@@ -21,11 +21,10 @@ $(document).ready(function () {
         // open the modal
         $('#noteModal').modal('open');
 
-        // set up response of clicking the notebutton
+       ]
         $('#noteButton').on('click', function (ret) {
             ret.preventDefault();
 
-            // define the text we'll be saving
             var noteText = $('#noteText');
 
                 $.post("/note/" + currentButton, $('#noteForm').serialize())
@@ -33,10 +32,10 @@ $(document).ready(function () {
                         populateNote(currentButton);
                     })
                     .fail(function (error) {
-                        console.log("Cannot", error);
+                        console.log("Cannot Post", error);
                     });
 
-            // empty out the note
+            // empty the note
             noteText.val('');
 
             return false;
@@ -61,11 +60,11 @@ $(document).ready(function () {
                     '<li class="note collection-item">'
                     + '<p>'
                     + (i+1) + ': ' + data[i].noteText + '</p>'
-                    + '<button class="individualNoteButton waves-effect waves-red btn-flat blue" data-currentButtonId="' + data[i]._id + '">Delete ' + (i+1) + '</button>'
+                    + '<button class="individualNoteButton waves-effect waves-red btn-flat blue" data-currentButtonId="' + data[i]._id + '">Delete ' + '</button>'
                     + '</li>'
                 );
 
-                // append the note to the div
+                
                 $('.messages').append(note);
             }
 
@@ -81,9 +80,10 @@ $(document).ready(function () {
 
            
                 $.post("/deleteNote/" + currentButtonId.currentbuttonid, $('#noteForm').serialize())
-                    .done(function (data) {
+                    .done(function (data) 
+                    {
 
-                        // after deleting the note, close the modal
+                        // close the modal 
                         $('#noteModal').modal('close');
                     })
 
