@@ -46,7 +46,7 @@ router.get('/note/:id', function(request, response)
 			if (error) console.log("error getting notes", error);
 
 			response.send(doc.note);
-			// console.log(doc.note);
+			
 		});
 });
 

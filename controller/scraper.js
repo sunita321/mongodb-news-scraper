@@ -40,7 +40,7 @@ function scrapedWeb(callback)
       // Save Article
       scrapeArticle.save(function(error) 
       {
-        if (error) console.log("Unable to save article", error);
+        //if (error) console.log("Unable to save article", error); //removes duplicate error msg
       });
     });
 
