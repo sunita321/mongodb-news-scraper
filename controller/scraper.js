@@ -21,7 +21,7 @@ function scrapedWeb(callback)
     // Then, we load that into cheerio and save it to $ for a shorthand selector
     var $ = cheerio.load(html);
 
-    /// Now, we grab articles by tag
+    //Target articles by tag
     $("ul.col li a").each(function(i, element) 
     {
       

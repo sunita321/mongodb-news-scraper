@@ -12,12 +12,6 @@ var app = express();
 
 
 
-
-
-// Launch App
-var port = process.env.PORT || 3000;
-
-
 // set up the HBS view engine
 app.engine('hbs', hbs({defaultLayout: 'main', extname: 'hbs', partialsDir: [__dirname + '/views/partials']}));
 app.set('view engine', 'hbs');
@@ -37,6 +31,12 @@ app.use(express.static('public'));
 
 // Import routes
 app.use('/', routes);
+
+
+
+// Launch App
+var port = process.env.PORT || 3000;
+
 
 app.listen(port, function()
 {

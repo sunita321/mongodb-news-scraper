@@ -1,16 +1,17 @@
-$(document).ready(function () {
+$(document).ready(function () 
+{
     $('.button-collapse').sideNav();
 
     // define the modal
     $('#noteModal').modal({
     });
 
-    // set up the onclick for the buttons for each note
-    $('.noteButton').on('click', function (ret) 
+    // onclick for the buttons for each note
+    $('.noteButton').on('click', function (noteRet) 
     {
 
         // if we have a duplicate listener, stop it from listening
-        ret.stopImmediatePropagation();
+        noteRet.stopImmediatePropagation();
 
         // select button to work with
         var currentButton = $(this).attr('id');
@@ -22,8 +23,8 @@ $(document).ready(function () {
         $('#noteModal').modal('open');
 
         // set up response of clicking the notebutton
-        $('#noteButton').on('click', function (ret) {
-            ret.preventDefault();
+        $('#noteButton').on('click', function (noteRet) {
+            noteRet.preventDefault();
 
             // define the text we'll be saving
             var noteText = $('#noteText');
@@ -54,7 +55,7 @@ $(document).ready(function () {
         $.get("/note/" + id, function (data) 
         {
 
-            // roll over the notes and populate them
+            // populate notes them
             for (var i = 0; i < data.length; i++) 
             {
                 var note = $(
